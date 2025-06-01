@@ -1,5 +1,5 @@
 <script lang="ts">
-	const { id, game_state }: { id: number; game_state: number[] } = $props();
+	const { id, over, game_state }: { id: number; over: boolean; game_state: number[] } = $props();
 
 	let cell_text = $derived.by(() => {
 		let idx = game_state.indexOf(id);
@@ -14,7 +14,7 @@
 	const onclick = () => {
 		const exists = game_state.find((x) => x == id);
 
-		if (exists) {
+		if (exists || over) {
 			return;
 		}
 
