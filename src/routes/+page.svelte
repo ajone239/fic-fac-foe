@@ -87,6 +87,19 @@
 	h1 {
 		text-align: center;
 	}
+	button {
+		height: 2em;
+		width: 8em;
+		border-radius: 0.5em;
+		margin: 0 0 1em 0;
+		background-color: #ddd;
+	}
+	.control-row {
+		display: flex;
+		flex-direction: row;
+		justify-content: center; /* center vertically */
+		gap: 6em;
+	}
 	.game-row {
 		display: flex;
 		flex-direction: row;
